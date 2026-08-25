@@ -68,8 +68,11 @@ AAOS-Guide/
 | 06 | 05-ai-integration | 《车载语音助手：从 ASR 到 LLM》 | ✅ 已发布 |
 | 07 | 05-ai-integration | 《Agent 在车机场景的应用》 | ✅ 已发布 |
 | 08 | 05-ai-integration | 《端侧 AI 的工程化实践》 | ✅ 已发布 |
-| 09 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
-| 10 | 05-ai-integration | 《车载多模态：语音 + 视觉的融合》 | 📋 规划中 |
+| 09 | 06-audio | 《CarAudioService：车载音频管理》 | ✅ 已发布 |
+| 10 | 07-ota | 《车载 OTA 升级：从差分包到 A/B 分区》 | ✅ 已发布 |
+| 11 | 08-permission | 《CarService 权限模型：系统权限与驾驶分心》 | ✅ 已发布 |
+| 12 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
+| 13 | 05-ai-integration | 《车载多模态：语音 + 视觉的融合》 | 📋 规划中 |
 
 ## 🚀 快速开始
 
