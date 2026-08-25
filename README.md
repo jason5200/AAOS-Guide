@@ -66,8 +66,9 @@ AAOS-Guide/
 | 04 | 04-perf | 《车机冷启动优化实战》 | ✅ 已发布 |
 | 05 | 05-ai-integration | 《大模型上车：端侧推理的可行方案》 | ✅ 已发布 |
 | 06 | 05-ai-integration | 《车载语音助手：从 ASR 到 LLM》 | ✅ 已发布 |
-| 07 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
-| 08 | 05-ai-integration | 《Agent 在车机场景的应用》 | 📋 规划中 |
+| 07 | 05-ai-integration | 《Agent 在车机场景的应用》 | ✅ 已发布 |
+| 08 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
+| 09 | 05-ai-integration | 《端侧 AI 的工程化实践》 | 📋 规划中 |
 
 ## 🚀 快速开始
 
