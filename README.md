@@ -62,8 +62,8 @@ AAOS-Guide/
 | 00 | 00-overview | 《车载 Android 全景：AAOS 到底是什么》 | ✅ 已发布 |
 | 01 | 01-car-service | 《CarService 架构：从 SystemServer 到车辆服务》 | ✅ 已发布 |
 | 02 | 02-carservice-api | 《CarPropertyManager：如何读写车辆属性》 | ✅ 已发布 |
-| 03 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
-| 04 | 03-multi-display | 《车机多屏显示：从 Display 到 Surface 的链路》 | 📋 规划中 |
+| 03 | 03-multi-display | 《车机多屏显示：从 Display 到 Surface 的链路》 | ✅ 已发布 |
+| 04 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 | 05 | 04-perf | 《车机冷启动优化实战》 | 📋 规划中 |
 | 06 | 05-ai-integration | 《大模型上车：端侧推理的可行方案》 | 📋 规划中 |
 
