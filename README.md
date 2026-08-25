@@ -71,8 +71,10 @@ AAOS-Guide/
 | 09 | 06-audio | 《CarAudioService：车载音频管理》 | ✅ 已发布 |
 | 10 | 07-ota | 《车载 OTA 升级：从差分包到 A/B 分区》 | ✅ 已发布 |
 | 11 | 08-permission | 《CarService 权限模型：系统权限与驾驶分心》 | ✅ 已发布 |
-| 12 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
-| 13 | 05-ai-integration | 《车载多模态：语音 + 视觉的融合》 | 📋 规划中 |
+| 12 | 09-rag | 《车载 RAG 实战：本地知识库问答》 | ✅ 已发布 |
+| 13 | 10-multimodal | 《车载多模态：语音 + 视觉融合》 | ✅ 已发布 |
+| 14 | 11-agent | 《Agent 框架：Function Calling 实战》 | ✅ 已发布 |
+| 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
 
