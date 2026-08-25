@@ -104,6 +104,12 @@ AAOS-Guide/
 | 42 | 34-rag-advanced | 《RAG 进阶：混合检索与重排序》 | ✅ 已发布 |
 | 43 | 35-rag-eval | 《RAG 的评估与优化》 | ✅ 已发布 |
 | 44 | 36-rag-chunking | 《RAG 的分块策略》 | ✅ 已发布 |
+| 45 | 37-agent-react | 《Agent 的规划：ReAct 与思维链》 | ✅ 已发布 |
+| 46 | 38-multi-agent | 《多 Agent 协作》 | ✅ 已发布 |
+| 47 | 39-agent-memory | 《Agent 的记忆系统》 | ✅ 已发布 |
+| 48 | 40-agent-framework | 《LangChain/LlamaIndex 在 Android 的应用》 | ✅ 已发布 |
+| 49 | 41-agent-security | 《车载 Agent 的安全框架》 | ✅ 已发布 |
+| 50 | 42-agent-observability | 《Agent 的可观测性》 | ✅ 已发布 |
 | 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
