@@ -74,6 +74,12 @@ AAOS-Guide/
 | 12 | 09-rag | 《车载 RAG 实战：本地知识库问答》 | ✅ 已发布 |
 | 13 | 10-multimodal | 《车载多模态：语音 + 视觉融合》 | ✅ 已发布 |
 | 14 | 11-agent | 《Agent 框架：Function Calling 实战》 | ✅ 已发布 |
+| 15 | 01-car-service | 《CarPowerManagementService：电源状态管理》 | ✅ 已发布 |
+| 16 | 01-car-service | 《CarHvacService：空调控制深入》 | ✅ 已发布 |
+| 17 | 01-car-service | 《CarSensorService：车辆传感器数据》 | ✅ 已发布 |
+| 18 | 01-car-service | 《CarInfoService：车辆静态信息》 | ✅ 已发布 |
+| 19 | 01-car-service | 《CarUxRestrictionsService：驾驶分心深入》 | ✅ 已发布 |
+| 20 | 12-vehicle-hal | 《Vehicle HAL 深入：从 AIDL 到实现》 | ✅ 已发布 |
 | 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
