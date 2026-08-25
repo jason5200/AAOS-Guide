@@ -64,8 +64,9 @@ AAOS-Guide/
 | 02 | 02-carservice-api | 《CarPropertyManager：如何读写车辆属性》 | ✅ 已发布 |
 | 03 | 03-multi-display | 《车机多屏显示：从 Display 到 Surface 的链路》 | ✅ 已发布 |
 | 04 | 04-perf | 《车机冷启动优化实战》 | ✅ 已发布 |
-| 05 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
-| 06 | 05-ai-integration | 《大模型上车：端侧推理的可行方案》 | 📋 规划中 |
+| 05 | 05-ai-integration | 《大模型上车：端侧推理的可行方案》 | ✅ 已发布 |
+| 06 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
+| 07 | 05-ai-integration | 《车载语音助手：从 ASR 到 LLM》 | 📋 规划中 |
 
 ## 🚀 快速开始
 
