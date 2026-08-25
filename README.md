@@ -110,6 +110,11 @@ AAOS-Guide/
 | 48 | 40-agent-framework | 《LangChain/LlamaIndex 在 Android 的应用》 | ✅ 已发布 |
 | 49 | 41-agent-security | 《车载 Agent 的安全框架》 | ✅ 已发布 |
 | 50 | 42-agent-observability | 《Agent 的可观测性》 | ✅ 已发布 |
+| 51 | 43-lora | 《LoRA 微调实战》 | ✅ 已发布 |
+| 52 | 44-multimodal-deploy | 《端侧多模态模型部署》 | ✅ 已发布 |
+| 53 | 45-tts | 《语音合成 TTS 端侧化》 | ✅ 已发布 |
+| 54 | 46-prompt | 《提示词工程：Prompt 设计》 | ✅ 已发布 |
+| 55 | 47-llm-safety | 《大模型安全：对齐与防护》 | ✅ 已发布 |
 | 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
