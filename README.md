@@ -92,6 +92,12 @@ AAOS-Guide/
 | 30 | 22-boot | 《车载启动流程：从开机到座舱可用》 | ✅ 已发布 |
 | 31 | 23-memory | 《车载内存优化：低内存设备》 | ✅ 已发布 |
 | 32 | 24-testing | 《车载测试：模拟器与 HIL 测试》 | ✅ 已发布 |
+| 33 | 25-transformer | 《Transformer 原理：注意力机制》 | ✅ 已发布 |
+| 34 | 26-training | 《大模型训练：从预训练到微调》 | ✅ 已发布 |
+| 35 | 27-quantization | 《模型量化：INT8/INT4 原理与实战》 | ✅ 已发布 |
+| 36 | 28-distill | 《模型蒸馏与剪枝》 | ✅ 已发布 |
+| 37 | 29-inference | 《端侧推理框架对比：MNN/NCNN/llama.cpp》 | ✅ 已发布 |
+| 38 | 30-mediapipe | 《MediaPipe LLM Inference 实战》 | ✅ 已发布 |
 | 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
