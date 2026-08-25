@@ -98,6 +98,12 @@ AAOS-Guide/
 | 36 | 28-distill | 《模型蒸馏与剪枝》 | ✅ 已发布 |
 | 37 | 29-inference | 《端侧推理框架对比：MNN/NCNN/llama.cpp》 | ✅ 已发布 |
 | 38 | 30-mediapipe | 《MediaPipe LLM Inference 实战》 | ✅ 已发布 |
+| 39 | 31-onnx | 《ONNX Runtime Mobile 实战》 | ✅ 已发布 |
+| 40 | 32-embedding | 《Embedding 与向量化》 | ✅ 已发布 |
+| 41 | 33-vectordb | 《向量数据库选型：Milvus/FAISS》 | ✅ 已发布 |
+| 42 | 34-rag-advanced | 《RAG 进阶：混合检索与重排序》 | ✅ 已发布 |
+| 43 | 35-rag-eval | 《RAG 的评估与优化》 | ✅ 已发布 |
+| 44 | 36-rag-chunking | 《RAG 的分块策略》 | ✅ 已发布 |
 | 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
