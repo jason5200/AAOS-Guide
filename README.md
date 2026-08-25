@@ -80,6 +80,12 @@ AAOS-Guide/
 | 18 | 01-car-service | 《CarInfoService：车辆静态信息》 | ✅ 已发布 |
 | 19 | 01-car-service | 《CarUxRestrictionsService：驾驶分心深入》 | ✅ 已发布 |
 | 20 | 12-vehicle-hal | 《Vehicle HAL 深入：从 AIDL 到实现》 | ✅ 已发布 |
+| 21 | 13-bluetooth | 《车载蓝牙电话：HFP 协议》 | ✅ 已发布 |
+| 22 | 14-navigation | 《车载导航：从定位到路径规划》 | ✅ 已发布 |
+| 23 | 15-multimedia | 《车载多媒体：音频焦点与分区》 | ✅ 已发布 |
+| 24 | 16-camera | 《车载倒车影像与环视系统》 | ✅ 已发布 |
+| 25 | 17-cluster | 《车载仪表盘：Cluster 显示》 | ✅ 已发布 |
+| 26 | 18-hud | 《车载 HUD：抬头显示》 | ✅ 已发布 |
 | 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
 
 ## 🚀 快速开始
