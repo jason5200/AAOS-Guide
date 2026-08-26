@@ -20,7 +20,7 @@
 
 本仓库按这条链路写：进程怎么起来、属性怎么读写、电源 / 音频 / 驾驶分心怎么卡住层。源码默认对照 [AOSP android-14.0.0_r67](AOSP_VERSION.md)。
 
-多屏、OTA、导航等是座舱能力，放在主线后半；大模型相关是附录，不占中间件路径。
+多屏、OTA、导航等是座舱能力，放在主线后半；**联发科 BSP** 是平行系列（启动 / AEE / 音频 HAL），不替代 CarService。大模型相关是附录。
 
 ## 中间件怎么读
 
@@ -61,6 +61,7 @@ AAOS-Guide/
 ├── 06-audio/             # CarAudioService
 ├── 08-permission/        # 权限与驾驶分心
 ├── 12-vehicle-hal/       # IVehicle AIDL
+├── 48-mtk/               # 联发科座舱 BSP（平行系列）
 ├── 03 / 07 / 13–24       # 多屏、OTA、蓝牙等座舱能力
 └── 05 / 09 / 25–47       # AI 附录（不挡中间件主线）
 ```
@@ -78,6 +79,17 @@ AAOS-Guide/
 | 权限 | [权限与驾驶分心](08-permission/car-permission.md) | 谁能控车、行驶中 UI 怎么收 |
 | 电源 | [CarPowerManagementService](01-car-service/car-power.md) | 熄火前 App 做什么 |
 | 音频 | [CarAudioService](06-audio/car-audio-service.md) | Zone、焦点、音量组 |
+
+## 联发科座舱（平行系列）
+
+芯片起来之后才谈得上中间件。入口：[BSP 接到哪一层](48-mtk/mtk-aaos-map.md)。
+
+| 文章 | 你读完应能回答 |
+|------|----------------|
+| [地图](48-mtk/mtk-aaos-map.md) | MTK 层和 CarService 各管什么 |
+| [启动](48-mtk/mtk-boot.md) | 黑屏卡在 Preloader 还是 WAIT_FOR_VHAL |
+| [AEE](48-mtk/mtk-aee.md) | KE / NE / JE / HWT 先看哪份 |
+| [音频](48-mtk/mtk-audio.md) | 没声是策略还是 HAL/DSP |
 
 其余车载文章（多屏、Cluster、OTA 等）见下表；标「概述」的不是实车/HIL 报告。
 

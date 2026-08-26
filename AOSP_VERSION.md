@@ -26,3 +26,4 @@
 - `CarSensorManager`、`CarHvacManager`、`CarInfoManager` 已废弃，信号请走 `CarPropertyManager`。
 - 车速属性是 `VehiclePropertyIds.PERF_VEHICLE_SPEED`（m/s）。HVAC 分区 `areaId` 来自 config 的 `VehicleAreaSeat` 位，不要写死 0/1/2。
 - 调试：`adb shell dumpsys car_service`；AIDL VHAL：`dumpsys android.hardware.automotive.vehicle.IVehicle/default`。inject 子命令以当前 `cmd car_service` 为准。
+- **联发科系列**（`48-mtk/`）写的是 vendor BSP 接到 AAOS 的结构，不是 AOSP 标签能钉死的路径；各车企目录会差一截，且不收录未公开工具链。
