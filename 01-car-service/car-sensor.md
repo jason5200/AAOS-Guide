@@ -21,7 +21,7 @@
 - 胎压、温度
 - 档位、方向盘角度
 
-这些数据由 **CarSensorService** 管理，通过 Vehicle HAL 从车辆总线获取。
+这些数据在现行 AAOS 里是 **Vehicle Property**，由 CarPropertyService 经 VHAL 从总线来。下面的 Sensor API 只用于读旧工程。
 
 ## 二、CarSensorService 的职责
 
@@ -135,6 +135,4 @@ propertyManager.registerCallback(callback,
 
 ---
 
-**下一篇**：[CarInfoService：车辆静态信息](car-info.md)
-
-> 配套仓库：[AAOS-Guide](https://github.com/jason5200/AAOS-Guide)
+**下一篇**：[车辆静态信息也走 Property](car-info.md)

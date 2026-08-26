@@ -24,8 +24,9 @@
 
 ## 内容规范
 
-- **准确性优先**：示例代码请标明是否在 AAOS 模拟器或真机上跑过。
-- **版本**：源码路径默认对照 [AOSP_VERSION.md](AOSP_VERSION.md)；改路径时请写明标签。
+- **准确性优先**：示例代码请标明是否在 AAOS 模拟器或真机上跑过。不要编造不存在的 API（例如 `requestShutdownDelay`、`VEHICLE_SPEED`、`getGroupForUsage`）。
+- **中间件主线**：Vehicle HAL → CarService → Property / Power / Audio / UX。空调、VIN、传感器请导向 `CarPropertyManager`。
+- **版本**：源码路径默认对照 [AOSP_VERSION.md](AOSP_VERSION.md)；改路径时请写明标签。文中代码是结构改写，不是逐行拷贝。
 - **标题层级**：文章用 `##` 作为主标题，`###` 作为小节。
 - **配图**：架构图使用 Mermaid 或 draw.io 源文件，放在 `assets/` 目录。
 - **代码块**：标注语言（如 ` ```kotlin `）。
