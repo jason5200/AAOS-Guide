@@ -1,142 +1,115 @@
 <div align="center">
 
-# AAOS-Guide 🚗
+# AAOS-Guide
 
-**车载 Android（Android Automotive OS）系统学习路线与实战教程 —— 从零搭建智能座舱认知**
+**车载 Android（Android Automotive OS）学习路线 —— 先把座舱系统讲清楚，AI 上车作为选读**
 
 [![Stars](https://img.shields.io/github/stars/jason5200/AAOS-Guide?style=social)](https://github.com/jason5200/AAOS-Guide)
-[![Forks](https://img.shields.io/github/forks/jason5200/AAOS-Guide?style=social)](https://github.com/jason5200/AAOS-Guide)
 [![License](https://img.shields.io/github/license/jason5200/AAOS-Guide)](https://github.com/jason5200/AAOS-Guide)
-[![Visitors](https://komarev.com/ghpvc/?username=jason5200&repo=AAOS-Guide&color=blueviolet)](https://github.com/jason5200/AAOS-Guide)
+[![AOSP](https://img.shields.io/badge/AOSP-android--14.0.0__r67-green)](AOSP_VERSION.md)
 
 </div>
 
 ---
 
-## 📌 为什么有这个仓库
+## 为什么有这个仓库
 
-网上车载 Android（AAOS）的资料零散、门槛高：要么是官方文档太抽象，要么是碎片化的博客，缺少一条**从「手机 Android」过渡到「车载 Android」的清晰路径**。
+网上车载 Android 资料要么是官方文档太抽象，要么是碎片博客。本仓库目标是一条**从手机 Android 过渡到 AAOS** 的主线：CarService、Vehicle HAL、多屏、性能、权限与座舱约束。
 
-本仓库目标：做一张**车载 Android 学习路线图**，用「概述 + 源码 + 实战 Demo + 系列文章」的方式，帮你建立对智能座舱系统的完整认知。
+大模型相关内容放在文末「选读」，不占用主路线。源码默认对照 [AOSP android-14.0.0_r67](AOSP_VERSION.md)，行号随分支会变。
 
-## 🧭 学习路线总览
+## 怎么读
 
 ```
 手机 Android 基础
       │
       ▼
-00 车载 Android 全景（AAOS 是什么、和手机 Android 的区别）
+00 全景：AAOS 是什么、和 Android Auto 的区别
       │
-      ├── 01 CarService 架构与核心服务
-      ├── 02 CarService API（车辆属性 / CarPropertyManager）
-      ├── 03 多屏显示与适配
-      ├── 04 车机性能（启动 / 流畅度 / 稳定性）
-      └── 05 AI 上车（语音 / 大模型 / 端侧推理）
+      ├── 01 CarService 与车辆服务
+      ├── 02 CarPropertyManager（现行车辆属性 API）
+      ├── 03 多屏 / Cluster / HUD
+      ├── 04 启动与性能
+      ├── 06–08 音频、OTA、权限与驾驶分心
+      └── 12–24 Vehicle HAL、蓝牙、导航、安全与测试
 ```
 
-## ✨ 特性
+建议顺序：`00-overview` → `01-car-service` → `02-carservice-api` → `12-vehicle-hal`。有具体问题再跳章节。
 
-- ✅ 体系化学习路线，标注前置知识与难度
-- ✅ 每篇配合源码解读与可运行 Demo
-- ✅ 与 `Framework-Source-Note`、`Car-Launcher-Demo`、`AI-Android-Demo` 仓库联动
-- ✅ 开放共建，欢迎 PR 补充与纠错
+配套代码：
 
-## 🗂️ 目录结构
+- [Car-Launcher-Demo](https://github.com/jason5200/Car-Launcher-Demo) —— 车机 Home 骨架（应用网格 + 时钟），需 AAOS 模拟器
+- [AI-Android-Demo](https://github.com/jason5200/AI-Android-Demo) —— 对话 UI + OpenAI 兼容 API（无 Key 时走 Mock）
+
+## 目录结构
 
 ```
 AAOS-Guide/
-├── README.md                 # 本文件：路线图 + 导航
-├── 00-overview/              # 车载 Android 全景：AAOS vs 手机 Android
-├── 01-car-service/           # CarService 架构与核心服务
-├── 02-carservice-api/        # 车辆属性、CarPropertyManager
-├── 03-multi-display/         # 多屏显示与适配
-├── 04-perf/                  # 车机启动、流畅度、稳定性
-├── 05-ai-integration/        # AI 上车：语音、大模型、端侧推理
-└── assets/                   # 图片、架构图
+├── README.md
+├── AOSP_VERSION.md           # 源码对照分支
+├── 00-overview/              # AAOS 全景
+├── 01-car-service/           # CarService 与子服务
+├── 02-carservice-api/        # CarPropertyManager
+├── 03-multi-display/         # 多屏
+├── 04-perf/                  # 冷启动
+├── 05-ai-integration/        # AI 上车（选读）
+├── 06-audio/ … 08-permission/
+├── 09-rag/ … 11-agent/       # RAG / 多模态 / Agent（选读）
+├── 12-vehicle-hal/ … 24-testing/
+└── 25-transformer/ … 47-llm-safety/  # 模型基础（选读）
 ```
 
-## 📚 系列文章
+## 主线文章（车载系统，28 篇）
 
-| 序号 | 目录 | 文章 | 状态 |
-|------|------|------|------|
-| 00 | 00-overview | 《车载 Android 全景：AAOS 到底是什么》 | ✅ 已发布 |
-| 01 | 01-car-service | 《CarService 架构：从 SystemServer 到车辆服务》 | ✅ 已发布 |
-| 02 | 02-carservice-api | 《CarPropertyManager：如何读写车辆属性》 | ✅ 已发布 |
-| 03 | 03-multi-display | 《车机多屏显示：从 Display 到 Surface 的链路》 | ✅ 已发布 |
-| 04 | 04-perf | 《车机冷启动优化实战》 | ✅ 已发布 |
-| 05 | 05-ai-integration | 《大模型上车：端侧推理的可行方案》 | ✅ 已发布 |
-| 06 | 05-ai-integration | 《车载语音助手：从 ASR 到 LLM》 | ✅ 已发布 |
-| 07 | 05-ai-integration | 《Agent 在车机场景的应用》 | ✅ 已发布 |
-| 08 | 05-ai-integration | 《端侧 AI 的工程化实践》 | ✅ 已发布 |
-| 09 | 06-audio | 《CarAudioService：车载音频管理》 | ✅ 已发布 |
-| 10 | 07-ota | 《车载 OTA 升级：从差分包到 A/B 分区》 | ✅ 已发布 |
-| 11 | 08-permission | 《CarService 权限模型：系统权限与驾驶分心》 | ✅ 已发布 |
-| 12 | 09-rag | 《车载 RAG 实战：本地知识库问答》 | ✅ 已发布 |
-| 13 | 10-multimodal | 《车载多模态：语音 + 视觉融合》 | ✅ 已发布 |
-| 14 | 11-agent | 《Agent 框架：Function Calling 实战》 | ✅ 已发布 |
-| 15 | 01-car-service | 《CarPowerManagementService：电源状态管理》 | ✅ 已发布 |
-| 16 | 01-car-service | 《CarHvacService：空调控制深入》 | ✅ 已发布 |
-| 17 | 01-car-service | 《CarSensorService：车辆传感器数据》 | ✅ 已发布 |
-| 18 | 01-car-service | 《CarInfoService：车辆静态信息》 | ✅ 已发布 |
-| 19 | 01-car-service | 《CarUxRestrictionsService：驾驶分心深入》 | ✅ 已发布 |
-| 20 | 12-vehicle-hal | 《Vehicle HAL 深入：从 AIDL 到实现》 | ✅ 已发布 |
-| 21 | 13-bluetooth | 《车载蓝牙电话：HFP 协议》 | ✅ 已发布 |
-| 22 | 14-navigation | 《车载导航：从定位到路径规划》 | ✅ 已发布 |
-| 23 | 15-multimedia | 《车载多媒体：音频焦点与分区》 | ✅ 已发布 |
-| 24 | 16-camera | 《车载倒车影像与环视系统》 | ✅ 已发布 |
-| 25 | 17-cluster | 《车载仪表盘：Cluster 显示》 | ✅ 已发布 |
-| 26 | 18-hud | 《车载 HUD：抬头显示》 | ✅ 已发布 |
-| 27 | 19-v2x | 《车载通信：V2X 车联网》 | ✅ 已发布 |
-| 28 | 20-safety | 《车载安全：功能安全与 ISO 26262》 | ✅ 已发布 |
-| 29 | 21-security | 《车载网络安全：CAN 总线安全》 | ✅ 已发布 |
-| 30 | 22-boot | 《车载启动流程：从开机到座舱可用》 | ✅ 已发布 |
-| 31 | 23-memory | 《车载内存优化：低内存设备》 | ✅ 已发布 |
-| 32 | 24-testing | 《车载测试：模拟器与 HIL 测试》 | ✅ 已发布 |
-| 33 | 25-transformer | 《Transformer 原理：注意力机制》 | ✅ 已发布 |
-| 34 | 26-training | 《大模型训练：从预训练到微调》 | ✅ 已发布 |
-| 35 | 27-quantization | 《模型量化：INT8/INT4 原理与实战》 | ✅ 已发布 |
-| 36 | 28-distill | 《模型蒸馏与剪枝》 | ✅ 已发布 |
-| 37 | 29-inference | 《端侧推理框架对比：MNN/NCNN/llama.cpp》 | ✅ 已发布 |
-| 38 | 30-mediapipe | 《MediaPipe LLM Inference 实战》 | ✅ 已发布 |
-| 39 | 31-onnx | 《ONNX Runtime Mobile 实战》 | ✅ 已发布 |
-| 40 | 32-embedding | 《Embedding 与向量化》 | ✅ 已发布 |
-| 41 | 33-vectordb | 《向量数据库选型：Milvus/FAISS》 | ✅ 已发布 |
-| 42 | 34-rag-advanced | 《RAG 进阶：混合检索与重排序》 | ✅ 已发布 |
-| 43 | 35-rag-eval | 《RAG 的评估与优化》 | ✅ 已发布 |
-| 44 | 36-rag-chunking | 《RAG 的分块策略》 | ✅ 已发布 |
-| 45 | 37-agent-react | 《Agent 的规划：ReAct 与思维链》 | ✅ 已发布 |
-| 46 | 38-multi-agent | 《多 Agent 协作》 | ✅ 已发布 |
-| 47 | 39-agent-memory | 《Agent 的记忆系统》 | ✅ 已发布 |
-| 48 | 40-agent-framework | 《LangChain/LlamaIndex 在 Android 的应用》 | ✅ 已发布 |
-| 49 | 41-agent-security | 《车载 Agent 的安全框架》 | ✅ 已发布 |
-| 50 | 42-agent-observability | 《Agent 的可观测性》 | ✅ 已发布 |
-| 51 | 43-lora | 《LoRA 微调实战》 | ✅ 已发布 |
-| 52 | 44-multimodal-deploy | 《端侧多模态模型部署》 | ✅ 已发布 |
-| 53 | 45-tts | 《语音合成 TTS 端侧化》 | ✅ 已发布 |
-| 54 | 46-prompt | 《提示词工程：Prompt 设计》 | ✅ 已发布 |
-| 55 | 47-llm-safety | 《大模型安全：对齐与防护》 | ✅ 已发布 |
-| 15 | 00-overview | 《AAOS 与手机 Android 的 5 个本质区别》 | 🚧 编写中 |
+| 序号 | 路径 | 文章 |
+|------|------|------|
+| 00 | 00-overview | [车载 Android 全景：AAOS 到底是什么](00-overview/aaos-intro.md) |
+| 01 | 01-car-service | [CarService 架构：从 SystemServer 到车辆服务](01-car-service/carservice-architecture.md) |
+| 02 | 01-car-service | [CarService 启动流程源码](01-car-service/carservice-startup-source.md) |
+| 03 | 02-carservice-api | [CarPropertyManager：如何读写车辆属性](02-carservice-api/carproperty-manager.md) |
+| 04 | 01-car-service | [CarPropertyService 属性读写源码](01-car-service/carproperty-source.md) |
+| 05 | 01-car-service | [CarPowerManagementService：电源状态管理](01-car-service/car-power.md) |
+| 06 | 01-car-service | [CarHvacService：空调控制](01-car-service/car-hvac.md) |
+| 07 | 01-car-service | [车辆传感器数据（API 已迁移说明）](01-car-service/car-sensor.md) |
+| 08 | 01-car-service | [CarInfoService：车辆静态信息](01-car-service/car-info.md) |
+| 09 | 01-car-service | [CarUxRestrictionsService：驾驶分心](01-car-service/car-ux.md) |
+| 10 | 08-permission | [CarService 权限模型](08-permission/car-permission.md) |
+| 11 | 12-vehicle-hal | [Vehicle HAL：从 AIDL 到实现](12-vehicle-hal/vehicle-hal.md) |
+| 12 | 03-multi-display | [车机多屏：从 Display 到 Surface](03-multi-display/multi-display.md) |
+| 13 | 17-cluster | [Cluster 仪表盘显示](17-cluster/cluster.md) |
+| 14 | 18-hud | [HUD 抬头显示](18-hud/hud.md) |
+| 15 | 16-camera | [倒车影像与环视](16-camera/reverse-camera.md) |
+| 16 | 06-audio | [CarAudioService：车载音频](06-audio/car-audio-service.md) |
+| 17 | 15-multimedia | [多媒体：音频焦点与分区](15-multimedia/multimedia.md) |
+| 18 | 13-bluetooth | [车载蓝牙电话：HFP](13-bluetooth/bluetooth-hfp.md) |
+| 19 | 14-navigation | [车载导航](14-navigation/navigation.md) |
+| 20 | 07-ota | [车载 OTA：差分包与 A/B 分区](07-ota/ota-upgrade.md) |
+| 21 | 22-boot | [从开机到座舱可用](22-boot/boot-process.md) |
+| 22 | 04-perf | [车机冷启动优化](04-perf/cold-start.md) |
+| 23 | 23-memory | [低内存设备优化](23-memory/memory-optimization.md) |
+| 24 | 19-v2x | [V2X 车联网（概述）](19-v2x/v2x.md) |
+| 25 | 20-safety | [功能安全与 ISO 26262（概述）](20-safety/functional-safety.md) |
+| 26 | 21-security | [CAN 总线安全（概述）](21-security/can-security.md) |
+| 27 | 24-testing | [模拟器与 HIL 测试](24-testing/testing.md) |
 
-## 🚀 快速开始
+带「概述」的几篇是背景扫盲，不是实车/HIL 实测报告。
 
-```bash
-# 克隆仓库
-git clone https://github.com/jason5200/AAOS-Guide.git
-cd AAOS-Guide
+## 选读：AI 上车（41 篇）
 
-# 建议阅读顺序：README → 00-overview → 01-car-service → ...
-```
+先读 `05-ai-integration/` 四篇建立「为什么要端侧」的直觉，其余（Transformer、量化、RAG、Agent 框架）按需查阅。完整列表见各目录，博客导读：[AI 上车系列](https://jason5200.github.io/#/series/ai)。
 
-> 💡 配套 Demo 仓库：`Car-Launcher-Demo`（车机 Launcher 实战）、`AI-Android-Demo`（AI 落地示例）
+入口：
 
-## 🤝 参与共建
+| 路径 | 建议先读 |
+|------|----------|
+| 05-ai-integration | [端侧推理可行方案](05-ai-integration/on-device-llm.md) · [车载语音](05-ai-integration/voice-assistant.md) · [座舱 Agent](05-ai-integration/agent-cockpit.md) · [工程化](05-ai-integration/ai-engineering.md) |
+| 09-rag | [车载 RAG](09-rag/car-rag.md) |
+| 11-agent | [Function Calling](11-agent/agent-framework.md) |
 
-欢迎 Issue 提需求、PR 补内容！贡献流程：
+## 参与共建
 
-1. Fork 本仓库
-2. 新建分支 `feature/你的内容`
-3. 提交 PR，说明改动点
+欢迎 Issue 纠错（尤其是 AOSP 版本与 API 废弃信息）。贡献流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
-## 📄 License
+## License
 
 [Apache-2.0](LICENSE) © [jason5200](https://github.com/jason5200)

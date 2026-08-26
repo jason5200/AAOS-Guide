@@ -4,6 +4,8 @@
 > 难度：⭐⭐⭐⭐ 深入
 > 更新：2026-08-27
 > 前置知识：《车机多屏显示》
+>
+> 车速等信号请用 `CarPropertyManager`（见 [car-sensor.md](../01-car-service/car-sensor.md)）。下文示例里的 `CarSensorManager` 仅作旧代码对照。
 
 ---
 

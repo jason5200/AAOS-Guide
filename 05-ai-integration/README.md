@@ -1,13 +1,14 @@
-# 05 AI 上车
+# 05 AI 上车（选读）
 
-> 目录：AAOS-Guide · 05-ai-integration
+已发布：
 
-## 规划中的内容
-
-| 文章 | 状态 |
+| 文章 | 文件 |
 |------|------|
-| 《大模型上车：端侧推理的可行方案》 | 📋 规划中 |
-| 《车载语音助手：从 ASR 到 LLM》 | 📋 规划中 |
-| 《Agent 在车机场景的应用》 | 📋 规划中 |
+| 端侧推理可行方案 | [on-device-llm.md](on-device-llm.md) |
+| 车载语音助手 | [voice-assistant.md](voice-assistant.md) |
+| 座舱 Agent | [agent-cockpit.md](agent-cockpit.md) |
+| 工程化实践 | [ai-engineering.md](ai-engineering.md) |
 
-> AI 上车是智能座舱的下一个增长点，聚焦「大模型 × 车机」的工程落地。
+这是 AI 系列的入口。Transformer / 量化 / RAG 等放在 `25-` 之后的目录，不挡车载主线。
+
+配套代码：[AI-Android-Demo](https://github.com/jason5200/AI-Android-Demo)（可接 OpenAI 兼容 API，无 Key 为 Mock）。
